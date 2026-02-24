@@ -422,22 +422,22 @@
 #         penultimate_number = num
 
 
-last_sum= 0
-sum_num = 0
+# last_sum= 0
+# sum_num = 0
 
-for i in range(4):
+# for i in range(4):
     
-    sum_num = last_sum /2 
+#     sum_num = last_sum /2 
 
-    while True:
-        num = int(input("Enter any number (The loop ends if the sum of number is" \
-                        " 40): "))
-        sum_num += num
+#     while True:
+#         num = int(input("Enter any number (The loop ends if the sum of number is" \
+#                         " 40): "))
+#         sum_num += num
 
-        if sum_num > 40:
-                break
+#         if sum_num > 40:
+#                 break
 
-    last_sum = sum_num
+#     last_sum = sum_num
     
     
 
