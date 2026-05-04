@@ -266,67 +266,95 @@
 #         filter_list.append(product)
 
 
-users = []
+# users = []
 
-ids = set()
+# ids = set()
 
-while True:
+# while True:
 
-    print("option 1. add user")
-    print("option 2. Found id")
-    print("option 3. Modify age")
-    print("option 4. Modify name")
-    print("option 5. Exit")
+#     print("option 1. add user")
+#     print("option 2. Found id")
+#     print("Within option 2, there are options 2.1, 2.2 and 2.3: " \
+#           "change name, age and delete user")
+#     print("option 5. Exit")
 
-    option = input("Choose an option: ")
+#     option = input("Choose an option: ")
 
-    if option == "1":
-        user_id = int(input("id is: "))
+#     if option == "1":
+#         user_id = int(input("id is: "))
     
-        if user_id in ids:
-            print("ERROR: the id already exists")
-        else:
-            name = input("name: ")
-            age = int(input("age: "))
+#         if user_id in ids:
+#             print("ERROR: the id already exists")
+#         else:
+#             name = input("name: ")
+#             age = int(input("age: "))
 
-            user = {
-                "id" : user_id,
-                "name" : name,
-                "age" : age
-            }
+#             user = {
+#                 "id" : user_id,
+#                 "name" : name,
+#                 "age" : age
+#             }
 
-            users.append(user)
-            ids.add(user_id)
+#             users.append(user)
+#             ids.add(user_id)
 
-            print("Saved user")
+#             print("Saved user")
     
-    elif option == "2":
-        search_id = int(input("Enter the id: "))
+#     elif option == "2":
+#         search_id = int(input("Enter the id: "))
 
-        found = False
+#         if search_id not in ids:
+#             print("The user does not exist.")
+#             continue
 
-        for user in users:
-            if user["id"] == search_id:
-                print("User found")
-                modifi = input("you want to modify it: yes / no")
-
-                if modifi == "yes":
-                    age_name = input("Option 1: Modify age, Option 2: Modify name")
-                else:
-                    continue
-                found = True
-                break
-            if not found:
-                print("The user does not exist.")
+#         for user in users:
+#             if user["id"] == search_id:
+#                 print("User found")
 
 
+#                 modifi = input("you want to modify it: yes / no")
 
-    elif option == "5":
-        print("Exit...")
-        break
+#                 if modifi == "yes":
 
-    else:
-        print("Invalid opcion")
+#                     age_name = input("Option 2.1: Modify name, " \
+#                                      "Option 2.2: Modify age," \
+#                                      "Option 2.3 delete user: ")
+
+#                     if age_name == "2.1":
+#                         new_name = input("Enter the new name: ")   
+
+#                         if new_name != "":
+#                             user["name"] = new_name
+#                             print("Name changed")
+#                         else:
+#                             print("ERROR: Empty name")
+                    
+#                     elif age_name == "2.2":
+#                         new_age = int(input("Enter the new age: ")) 
+
+#                         if new_age >= 0:
+#                             user["age"] = new_age
+#                         else:
+#                             print("ERROR: Invalid age")
+
+#                     elif age_name == "2.3":
+#                         delete = input("Are you sure you want to delete the user? yes/no")
+                    
+#                         if delete == "yes":
+#                             users.remove(user)
+#                             ids.remove(user["id"])
+#                             print("User deleted")
+#                         else:
+#                             print("The user was not deleted")
+#                 break
+    
+
+#     elif option == "5":
+#         print("Exit...")
+#         break
+
+#     else:
+#         print("Invalid opcion")
             
 
 
