@@ -100,7 +100,6 @@
 
 # for i in range(3):
 #     data = int(input("enter some data: "))
-   
 
 #     if i == 0:
 #         a = data
@@ -113,7 +112,41 @@
 
 # print(result)
 
+# def multiply(a,b):
+#     result =  a * b 
+#     return result
+
+# def division(a,b):
+#     if a == 0:
+#         print("Error: Cannot divide by zero.")
+#     else:
+#         result = a / b
+#         return result
     
+# def total_addition(a,b,c,d,e):
+#     total_addition = a + b + c + d + e
+#     return total_addition
 
 
+# print(total_addition(1, 85, 16,25,30))
+# print(division(1,5))
+
+# def triangle_area(b,h):
+#     result = (b * h) / 2
+#     return result
+
+
+# area = triangle_area(5,10)
+
+# while True:
+#     if area<= 25:
+#         print("The area of this triangle does not meet the requirements.")
+#         break
+#     else:
+#         print("The area of this triangle meets the requirements.")
+#         break
+
+# print(triangle_area(10,2))
+# print(triangle_area(20,8))
+# print(triangle_area(20.3,8.5))
 
