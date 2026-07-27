@@ -113,7 +113,7 @@
 # print(result)
 
 # def multiply(a,b):
-#     result =  a * b 
+#     result =  a * b
 #     return result
 
 # def division(a,b):
@@ -122,7 +122,7 @@
 #     else:
 #         result = a / b
 #         return result
-    
+
 # def total_addition(a,b,c,d,e):
 #     total_addition = a + b + c + d + e
 #     return total_addition
@@ -136,7 +136,6 @@
 #     return result
 
 
-# area = triangle_area(5,10)
 
 # while True:
 #     if area<= 25:
@@ -149,4 +148,83 @@
 # print(triangle_area(10,2))
 # print(triangle_area(20,8))
 # print(triangle_area(20.3,8.5))
+
+# def results():
+#     return 50
+
+# def subtraction():
+#     result = results()
+#     return result - 21
+
+# def addition():
+#     final_result = subtraction() + 21
+#     print(final_result)
+
+# addition()
+
+
+# def division(a,b):
+
+#     if b == 0: 
+#         print ("ERROR; YOU CANNOT DIVIDE BY 0")
+#     else:
+#         operation_result= a / b
+#         return operation_result
+
+# def addition(a,b):
+
+#     operation_result = a + b
+#     return operation_result
+
+# def subtraction(a,b):
+
+#     operation_result = a - b 
+#     return operation_result
+
+# def power(a):
+#     operation_result = a ** 2
+#     return operation_result
+
+
+# radius = 7
+# base = 5
+
+# def area_triangle(h):
+
+#     result_area = (base*h) / 2
+#     return result_area
+
+# def area_circle():
+#     pi = 3.1416
+
+#     result_area = pi * (radius**2)
+#     return result_area
+
+
+# print(area_circle())
+# print(area_triangle(7))
+
+
+
+# global_variable = 10
+
+# def division_one(a):
+
+#     if a == 0:
+#         print("ERROR")
+#     else:
+#         result_divison = global_variable / a
+#     return result_divison
+
+# def division_two(a,b):
+
+#     if b == 0:
+#         print("ERROR")
+#     else:
+#         result_division = a / b
+#     return result_division
+
+# print(division_one(7))
+# print(division_two(5,8))
+
 
