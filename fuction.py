@@ -228,3 +228,116 @@
 # print(division_two(5,8))
 
 
+# initial_value = 58
+
+# def substraction_value(a):
+#     global initial_value
+
+#     initial_value  = initial_value - a
+#     return initial_value
+
+# def sum_value(a):
+#     global initial_value
+
+#     initial_value = initial_value + a
+#     return initial_value
+
+# def substraction_value_one(a):
+#     global initial_value
+
+#     initial_value = a - initial_value
+#     return initial_value
+
+# print(substraction_value(5))
+# print(sum_value(85))
+# print(substraction_value_one(52))
+
+# print(initial_value)
+
+# def value():
+#     return 20
+
+# def substraction_value(a):
+#     result_value = value() - a
+#     return result_value
+
+# def addition_value(a):
+#     result_value = value() + a 
+#     return result_value
+
+# print(addition_value(21))
+# print(substraction_value(9))
+# print(value())
+
+final_names = []
+correct_names = []
+repeated_names = []
+registered_names= set()
+
+# def name_revision(name, registered_names, correct_names, repeated_names):
+
+#     if name == "":
+#         print("ERROR: Empty name")
+#         return
+
+#     if name in registered_names:
+#         repeated_names.append(name)
+#     else:
+#         registered_names.add(name)
+#         correct_names.append(name)
+
+
+# while True:
+
+#     name = input("Enter a name(type 'exit' to finish): ")
+
+#     if name.lower() == "exit":
+#         break
+
+#     name_revision(
+#         name, 
+#         registered_names,
+#         correct_names,
+#         repeated_names
+#     )
+
+# print("Correct names:", correct_names)
+# print("Repeated names:", repeated_names)
+# print("Registered names:", registered_names)
+
+# def normal_name(name,correct_names):
+
+#     if name == "":
+#         print("ERROR: DENIED NAME")
+#         return
+
+#     if not name.isalpha():
+#         print("ERROR: DENIED NAME")
+#         return
+
+#     correct_names.append(name)
+
+# def revision_name(name,repeated_names, registered_names, final_names):
+
+#     if name in registered_names:
+#         repeated_names.append(name)
+#     else:
+#         registered_names.add(name)
+#         final_names.append(name)
+
+
+# while True:
+
+#     name = input("Enter a name (type 'exit' to finish): ")
+
+#     if name.lower() == "exit":
+#         break
+
+#     normal_name( name, correct_names)
+#     revision_name(name,repeated_names,registered_names,final_names)
+
+
+
+# print(correct_names)
+# print(registered_names)
+# print(final_names)
