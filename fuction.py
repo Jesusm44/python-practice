@@ -269,10 +269,11 @@
 # print(substraction_value(9))
 # print(value())
 
-final_names = []
-correct_names = []
-repeated_names = []
-registered_names= set()
+# final_names = []
+# correct_names = []
+# repeated_names = []
+# registered_names= set()
+# fail_names = []
 
 # def name_revision(name, registered_names, correct_names, repeated_names):
 
@@ -341,3 +342,167 @@ registered_names= set()
 # print(correct_names)
 # print(registered_names)
 # print(final_names)
+
+# money = 10
+# food_order = None
+# pickup = 0
+# deposit = 0
+
+
+# def bank_acc(name):
+#     global deposit, pickup, food_order
+
+#     if name == "":
+#         print("Name ERROR")
+#         return
+
+#     if not name.isalpha():
+#         print("ERROR: Invalid Name")
+#         return
+
+#     if deposit > 0:
+#         deposit+= money
+#     else:
+#         print("ERROR: INVALID DEPOSIT")
+
+#     if pickup > money:
+#         print("ERROR: You do not have enough funds")
+#         return
+#     else:
+#         print(f'Success deposit. Remaining balance{money}')
+
+#     if food_order == "":
+#         print("ERROR: The order is empty")
+#         return
+#     else:
+#         print("WHAT THE HELL ARE YOU DOING ASKING FOR FOOD AT THE BANK?")
+
+
+# available_balance = 20
+
+# def deposit(new_deposit, available_balance):
+
+#     if new_deposit < 0:
+#         print("ERROR: The deposit cannot be 0 less")
+#         return available_balance
+
+#     available_balance += new_deposit
+#     print("Successful deposit")
+#     return available_balance
+
+# def withdrawal(new_withdrawal, available_balance):
+
+#     if new_withdrawal < 0:
+#         print("ERROR: The withdraw cannot be 0 less")
+#         return available_balance
+
+#     if new_withdrawal > available_balance:
+#         print("You cannot withdraw an amount greater than your balance.")
+#         return available_balance 
+
+#     available_balance -= new_withdrawal
+#     print("Withdrawal successfully completed")
+#     return available_balance
+
+# def information(available_balance):
+#     print(f'The available balance is: {available_balance}')
+
+
+# while True:
+
+#     option = input(
+#         "1. Deposit\n"
+#         "2. Withdrawal\n"
+#         "3. Show balance\n"
+#         "4. Exit\n"
+#         "Choose an option: "
+#     )
+
+#     if option == "1":
+#         new_deposit = float(input("Enter the amount to deposit: "))
+
+#         available_balance = deposit(new_deposit,available_balance)
+
+#     elif option =="2":
+#         new_withdrawal = float(input("Enter a new withdrawal amount: "))
+#         available_balance = withdrawal(new_withdrawal, available_balance)
+
+#     elif option == "3":
+#         information(available_balance)
+
+#     elif option == "4":
+#         print("Logging out... Session closed.")
+#         break
+
+
+available_balance = 20
+
+def validation(a):
+
+    if a < 0:
+        print("The amount must be greater than 0.")
+        return False
+    else:
+        return True
+
+def deposit(new_deposit, available_balance):
+
+    if validation(new_deposit):
+        available_balance += new_deposit
+        print("Successful deposit")
+        return available_balance
+
+def withdrawal(new_withdrawal, available_balance):
+
+    if validation(new_withdrawal):
+        if new_withdrawal > available_balance:
+            print("You cannot withdraw an amount greater than your balance.")
+            return available_balance 
+
+        available_balance -= new_withdrawal
+        print("Withdrawal successfully completed")
+        return available_balance
+
+def information(available_balance):
+    print(f'The available balance is: {available_balance}')
+
+while True:
+
+    option = input(
+        "1. Deposit\n"
+        "2. Withdrawal\n"
+        "3. Show balance\n"
+        "4. Exit\n"
+        "Choose an option: "
+    )
+
+    if option == "1":
+        new_deposit = float(input("Enter the amount to deposit: "))
+
+        available_balance = deposit(new_deposit,available_balance)
+
+    elif option =="2":
+        new_withdrawal = float(input("Enter a new withdrawal amount: "))
+        available_balance = withdrawal(new_withdrawal, available_balance)
+
+    elif option == "3":
+        information(available_balance)
+
+    elif option == "4":
+        print("Logging out... Session closed.")
+        break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
