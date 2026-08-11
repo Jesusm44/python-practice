@@ -69,31 +69,31 @@
 # print(f'La cantidad de numeros impares fueron: {numeros_impares}')
 
 
-cantidad_ingresados = 0
-cantidad_impares = 0 
-ceros_ingresados = 0
-numero_anterior = None
-numero_mayor = None
-cantidad_ceros = 0
+# cantidad_ingresados = 0
+# cantidad_impares = 0 
+# ceros_ingresados = 0
+# numero_anterior = None
+# numero_mayor = None
+# cantidad_ceros = 0
 
-while True:
-    numero = int(input("Ingrese un numero (Si ingresa dos numeros pares seguido acaba): "))
+# while True:
+#     numero = int(input("Ingrese un numero (Si ingresa dos numeros pares seguido acaba): "))
     
-    if numero_anterior is not None:
-        if numero % 2 == 0 and numero_anterior % 2 == 0:
-            break
-    else:
-        if numero == 0:
-            cantidad_ceros += 1
-        elif numero % 2 == 1:
-            cantidad_impares += 1
-    if numero_mayor is None or numero > numero_mayor:
-        numero_mayor = numero
+#     if numero_anterior is not None:
+#         if numero % 2 == 0 and numero_anterior % 2 == 0:
+#             break
+#     else:
+#         if numero == 0:
+#             cantidad_ceros += 1
+#         elif numero % 2 == 1:
+#             cantidad_impares += 1
+#     if numero_mayor is None or numero > numero_mayor:
+#         numero_mayor = numero
         
-    cantidad_ingresados += 1
-    numero_anterior = numero
+#     cantidad_ingresados += 1
+#     numero_anterior = numero
         
-print (f'Numeros ingresados: {cantidad_ingresados}')
-print(f'Numeros impares: {cantidad_impares}')
-print(f'Cantidad de ceros: {cantidad_ceros}')
-print(f'El numero mayor ingresado es {numero_mayor}')
+# print (f'Numeros ingresados: {cantidad_ingresados}')
+# print(f'Numeros impares: {cantidad_impares}')
+# print(f'Cantidad de ceros: {cantidad_ceros}')
+# print(f'El numero mayor ingresado es {numero_mayor}')
