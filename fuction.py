@@ -435,73 +435,132 @@
 #         break
 
 
-available_balance = 20
+# available_balance = 20
 
-def validation(a):
+# def validation(a):
 
-    if a < 0:
-        print("The amount must be greater than 0.")
-        return False
-    else:
-        return True
+#     if a < 0:
+#         print("The amount must be greater than 0.")
+#         return False
+#     else:
+#         return True
 
-def deposit(new_deposit, available_balance):
+# def deposit(new_deposit, available_balance):
 
-    if validation(new_deposit):
-        available_balance += new_deposit
-        print("Successful deposit")
-        return available_balance
+#     if validation(new_deposit):
+#         available_balance += new_deposit
+#         print("Successful deposit")
+#         return available_balance
 
-def withdrawal(new_withdrawal, available_balance):
+# def withdrawal(new_withdrawal, available_balance):
 
-    if validation(new_withdrawal):
-        if new_withdrawal > available_balance:
-            print("You cannot withdraw an amount greater than your balance.")
-            return available_balance 
+#     if validation(new_withdrawal):
+#         if new_withdrawal > available_balance:
+#             print("You cannot withdraw an amount greater than your balance.")
+#             return available_balance 
 
-        available_balance -= new_withdrawal
-        print("Withdrawal successfully completed")
-        return available_balance
+#         available_balance -= new_withdrawal
+#         print("Withdrawal successfully completed")
+#         return available_balance
 
-def information(available_balance):
-    print(f'The available balance is: {available_balance}')
+# def information(available_balance):
+#     print(f'The available balance is: {available_balance}')
 
-while True:
+# while True:
 
-    option = input(
-        "1. Deposit\n"
-        "2. Withdrawal\n"
-        "3. Show balance\n"
-        "4. Exit\n"
-        "Choose an option: "
-    )
+#     option = input(
+#         "1. Deposit\n"
+#         "2. Withdrawal\n"
+#         "3. Show balance\n"
+#         "4. Exit\n"
+#         "Choose an option: "
+#     )
 
-    if option == "1":
-        new_deposit = float(input("Enter the amount to deposit: "))
+#     if option == "1":
+#         new_deposit = float(input("Enter the amount to deposit: "))
 
-        available_balance = deposit(new_deposit,available_balance)
+#         available_balance = deposit(new_deposit,available_balance)
 
-    elif option =="2":
-        new_withdrawal = float(input("Enter a new withdrawal amount: "))
-        available_balance = withdrawal(new_withdrawal, available_balance)
+#     elif option =="2":
+#         new_withdrawal = float(input("Enter a new withdrawal amount: "))
+#         available_balance = withdrawal(new_withdrawal, available_balance)
 
-    elif option == "3":
-        information(available_balance)
+#     elif option == "3":
+#         information(available_balance)
 
-    elif option == "4":
-        print("Logging out... Session closed.")
-        break
+#     elif option == "4":
+#         print("Logging out... Session closed.")
+#         break
 
+# def price_ctalculator(price, discount):
+#     tax = 0.15
 
+#     total_pay = (price + (price * tax)) - discount
+#     return total_pay
 
+# print(price_ctalculator(150,20))
 
+# numero = 10
+# lista = []
 
+# def calcular(valor):
+#     global numero
+#     global lista
 
+#     resultado = valor * numero
 
+#     lista.append(resultado)
 
+#     print("El resultado es:", resultado)
 
+#     numero = numero + 1
 
+#     return resultado
 
+# number = 10
+
+# list_result = []
+
+# def save_results(value, number, list_result):
+
+#     rseult = value * number 
+
+#     list_result.append(rseult)
+#     return list_result
+
+# print(save_results(10,number,list_result))
+
+# products = [
+#     {"name": "Laptop", "price": 900},
+#     {"name": "Mouse", "price": 25},
+#     {"name": "Monitor", "price": 300}
+# ]
+
+# def price_filter(products):
+#     products_filter = []
+
+#     for product in products:
+#         if product["price"] > 25:
+#             products_filter.append(product)
+#     return products_filter
+
+# print(price_filter(products))
+
+# def modified_price_filter(products):
+#     new_price = int(input("Enter a new price: "))
+
+#     for product in products:
+#         if product["price"] <= 25:
+#             if new_price != 0 or new_price <= 25:
+#                 product["price"] = new_price
+#                 print ("Price updated")
+#             else:
+#                 print ("ERROR: New Price not valid")
+#         else:
+#             print("No hay nada que cambiar")
+#     return products
+
+# print(modified_price_filter(products))
 
 
 

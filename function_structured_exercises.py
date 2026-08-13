@@ -377,6 +377,253 @@
 
 # show_results()
 
+# products = [
+#     {
+#         "id": 1,
+#         "name": "Laptop",
+#         "price": 900,
+#         "stock": 5
+#     },
+#     {
+#         "id": 2,
+#         "name": "Mouse",
+#         "price": 25,
+#         "stock": 20
+#     },
+#     {
+#         "id": 3,
+#         "name": "Monitor",
+#         "price": 300,
+#         "stock": 7
+#     }
+# ]
+
+# # This function is used to search for products.
+# def product_search(products, search):
+#     for product in products:
+#         if product["name"] == search.capitalize():
+#             print(f"Product found: {search}")
+#             return product
+
+#     print("Product not found")
+#     return None
+
+# # This function is used to calculate each product value; it is an impure function because it uses the search_product function.
+# def calculate_value_product(products, search):
+#     product = product_search(products,search)
+
+#     if product is not None:
+#         total_values= product["price"] * product["stock"]
+#         return total_values
+
+#     return 0
+
+# # This function is used to calculate the total value of all products
+# def value_total(products):
+#     value_total = 0
+
+#     for product in products:
+#         value_total += product["price"] * product["stock"]
+#     return value_total
+
+# # This function is used to see which products have low stock and saves them in a separate list within the function, so as not to depend on a global variable.
+# def low_stock(products):
+#     low_product = []
+#     for product in products:
+#         if product["stock"] <= 10:
+#             low_product.append(product)
+
+#     return low_product
+
+# # This function is used to update the stock of products that are low. It's an impure function because it uses a list of products with low stock and, through a search, decides which product to update the stock of.
+# def update_stock(products, change, search_low):
+#     product = low_stock(products)
+
+#     for p in product:
+#         if p["name"] == search_low.capitalize():
+#             if change <= 10:
+#                 print("The change cannot be made")
+#                 return
+#             else:
+#                 p["stock"] = change
+#                 print("Stock changed")
+#                 return
+
+#     print("Product not found or stock is not low")
+
+# # This function is used to display the available products.
+# def show_info(products):
+#     result = ""
+
+#     for product in products:
+#         result += f"""
+#         ID: {product["id"]}
+#         Name: {product["name"]}
+#         Price: {product["price"]}
+#         Stock: {product["stock"]}
+#         """
+
+#     return result
+
+# # testing
+# print(update_stock(products,50,"laptop"))
+# print(show_info(products))
+
+# users = [
+#     {
+#         "id": 1,
+#         "name": "Carlos",
+#         "age": 24,
+#         "active": True
+#     },
+#     {
+#         "id": 2,
+#         "name": "Maria",
+#         "age": 28,
+#         "active": True
+#     }
+# ]
+
+# def search_user(users,name):
+#     for user in users:
+#         if user["name"] == name:
+#             return user
+#     print ("User not found")
+#     return None
+
+# def search_user_id(users, user_id):
+#     for user in users:
+#         if user["id"] == user_id:
+#             return user
+
+#     return None
+
+# def calculate_users(users):
+#     count_users = 0
+
+#     for user in users:
+#         count_users += 1
+#     return count_users
+
+# def validate_users_new_name(users, new_name):
+#     user = search_user(users,new_name)
+
+#     if user is not None:
+#         return False
+    
+#     if new_name.strip() == "":
+#         return False
+
+#     return True
+
+# def validate_user_new_id(users,new_id):
+#     user_id = search_user_id(users,new_id)
+
+#     if user_id is not None:
+#         return False
+
+#     if new_id < 0:
+#         return False
+    
+#     return True
+
+# def validate_new_age(new_age):
+#     if new_age <= 0:
+#         return False
+#     else:
+#         return True
+
+# def validate_new_state(state):
+#     if state == "T":
+#         return True
+#     if state == "F":
+#         return False
+#     else:
+#         print("Error: State not valid")
+
+# def new_user(users,new_age,new_id,new_name,new_state):
+#     user_id = validate_user_new_id(users,new_id)
+#     user_name = validate_users_new_name(users,new_name)
+#     user_age = validate_new_age(new_age)
+#     user_satate = validate_new_state(new_state)
+
+#     if user_id and user_name and user_age and user_satate is not None:
+        
+#         validate_user ={
+#             "id" : new_id,
+#             "name": new_name,
+#             "age": new_age,
+#             "active": user_satate
+#         }
+
+#         users.append(validate_user)
+#         print("User successfully logged in")
+#         return users
+    
+#     return None
+
+# def change_state(users, user_id, state):
+#     user = search_user_id(users, user_id)
+
+#     if user is None:
+#         return "ERROR: User not found"
+
+#     new_state = validate_new_state(state)
+
+#     if new_state is None:
+#         return "ERROR: State not valid"
+
+#     if user["active"] == new_state:
+#         return "ERROR: Cannot change to the same state"
+
+#     user["active"] = new_state
+
+#     return "User state updated successfully"
+
+# def show_users(users):
+#     result = ""
+
+#     for user in users:
+#         result += f"""
+#         ID: {user["id"]}
+#         Name: {user["name"]}
+#         Price: {user["age"]}
+#         Stock: {user["active"]}
+#         """
+
+#     return result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
