@@ -593,12 +593,44 @@
 
 #     return result
 
+# users = [
+#     {"id": 1, "name": "Ana", "age": 20},
+#     {"id": 2, "name": "Luis", "age": 17},
+#     {"id": 3, "name": "Carlos", "age": 25}
+# ]
+
+# def validate_users(users):
+#     users_v = []
+
+#     for user in users:
+#         if user["name"].strip() != "" and user["age"] >= 18:
+#             users_v.append(user)
+
+#     return users_v
 
 
+# def show_users(users):
+#     user = validate_users(users)
+#     result = ""
 
+#     for u in user:
+#         result += f"""
+# {u["name"]} - {u["age"]}
+# """
+#     return result
 
+# def age_sum(users):
+#     total = 0
+#     user = validate_users(users)
 
+#     for u in user:
+#         total += u["age"]
 
+#     return (f'The sum of the ages is: {total}')
+
+# print(validate_users(users))
+# print(show_users(users))
+# print(age_sum(users))
 
 
 
