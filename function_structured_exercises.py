@@ -610,27 +610,25 @@
 
 
 # def show_users(users):
-#     user = validate_users(users)
 #     result = ""
 
-#     for u in user:
+#     for user in users:
 #         result += f"""
-# {u["name"]} - {u["age"]}
-# """
+# {user["name"]} - {user["age"]} """
 #     return result
 
 # def age_sum(users):
 #     total = 0
-#     user = validate_users(users)
 
-#     for u in user:
-#         total += u["age"]
+#     for user in users:
+#         total += user["age"]
 
 #     return (f'The sum of the ages is: {total}')
 
-# print(validate_users(users))
-# print(show_users(users))
-# print(age_sum(users))
+# user = validate_users(users)
+
+# print(age_sum(user))
+# print(show_users(user))
 
 
 
