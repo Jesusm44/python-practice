@@ -292,3 +292,27 @@
 
 # kwargs(**person)
 
+def create_basic_user(name: str, age: int):
+    if not isinstance(name, str):
+        return None
+
+    if not isinstance(age, int):
+        return None
+
+    if name.strip() == "":
+        return None
+
+    if age not in range(1,121):
+        return None
+
+    print(f'Nombre: {name} - Edad: {age}')
+    print("-" * 25)
+
+create_basic_user("Ana", 24)
+create_basic_user("", 24)
+create_basic_user(123, 24)
+create_basic_user("Ana", "24")
+create_basic_user("Ana", -5)
+create_basic_user("Ana", 150)
+
+
