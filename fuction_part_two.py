@@ -1,3 +1,5 @@
+from itertools import product
+from typing import Any
 # def create_products(name, price: int, categoria, stock = 0, status = False):
 #     print(f'{name} - {price} - {categoria} - {stock} - {status}')
 
@@ -441,3 +443,175 @@
 # for user in users:
     # print(validation_user(user))
 
+
+# num_list:list[int] = [2,5,6,7,9,10,25]
+# duplicate_numbers:list[int] =list(map(lambda x: x * 2, num_list))
+# print(f"The duplicate numbers is: {duplicate_numbers}")
+
+# sum_continous:list[int] = list(map(lambda x: x + 10, num_list))
+# print(f'The constant sum the numbers are: {sum_continous}')
+
+# word:str = "Hola, como estas"
+# len_string:int = len(word)
+# print(f'The leng string is: {len_string}')
+
+# users:list[dict[str,Any]] = [
+#     {"id": 1, "name": "Ana", "age": 20},
+#     {"id": 2, "name": "Luis", "age": 17},
+#     {"id": 3, "name": "Carlos", "age": 25}
+# ]
+
+# select_value:list[Any] = list(map(
+#     lambda user: user["age"],
+#     users
+# ))
+# print(select_value)
+
+# check_condition:list[Any] = list(filter(
+#     lambda user: user["age"] < 18,
+#     users
+# ))
+# print(check_condition)
+
+
+# products:list[dict[str,Any]] = [
+#     {"name": "Laptop", "price": 900},
+#     {"name": "Mouse", "price": 25},
+#     {"name": "Monitor", "price": 300},
+#     {"name": "Teclado", "price": 60}
+# ]
+
+# products_ordered_name:list[dict[str,Any]] = sorted(
+#     products,
+#     key= lambda product: product["name"]
+# )
+
+# products_ordered_price:list[dict[str,Any]] = sorted(
+#     products,
+#     key= lambda product: product["price"]
+# )
+
+# products_ordered_lenname:list[dict[str,Any]] = sorted(
+#     products,
+#     key= lambda product: len(product["name"])
+# ) 
+
+# print(products_ordered_name)
+# print(products_ordered_price)
+# print(products_ordered_lenname)
+
+# def get_name(product:dict[str,Any]):
+#     return product["name"]
+
+# name:list[dict[str, Any]] = sorted(
+#     products,
+#     key= get_name
+# )
+
+# def get_price(product:dict[str,Any]):
+#     return product["price"]
+
+# price:list[dict[str, Any]] = sorted(
+#     products,
+#     key= get_price
+# )
+# def get_len_name(product:dict[str,Any]):
+#     return len(product["name"])
+
+# len_name: list[dict[str, Any]] = sorted(
+#     products,
+#     key= get_len_name
+# )
+
+# print(name)
+# print(price)
+# print(len_name)
+
+# numbers: list[int] = [1, 2, 3, 4, 5]
+
+# duplicate_numbers: list[int] = list(map(
+#     lambda x: x * 2,
+#     numbers
+# ))
+# print(duplicate_numbers)
+
+# square:list[int] = list(map(
+#     lambda x: x ** 2,
+#     numbers
+# )) 
+# print(square)
+
+# convert_string: list[str] = list(map(
+#     lambda x: str(x),
+#     numbers
+# )) 
+
+# print(convert_string)
+
+# numbers:list[int]= [-5,2,-1,8,0,4,-3]
+
+# positive:filter[int] = filter(
+#     lambda x: x > 0,
+#     numbers
+# )
+
+# negative:list[int]= list(filter(
+#     lambda x: x < 0,
+#     numbers
+# ))
+
+# even_numbers:list[int]= list(filter(
+#     lambda x: x % 2 == 0,
+#     numbers
+# ))
+
+# older_three:list[int] = list(filter(
+#     lambda x: x > 3,
+#     numbers
+# ))
+
+products:list[dict[Any,str|int]] = [
+    {"name": "Laptop", "price": 900, "stock": 5},
+    {"name": "Mouse", "price": 25, "stock": 20},
+    {"name": "Monitor", "price": 300, "stock": 7},
+    {"name": "Keyboard", "price": 60, "stock": 12}
+]
+
+# def sort_price(product)-> Any:
+#     return product["price"]
+
+# sort_by_price:list[dict[Any,str|int]] = sorted(
+#     products,
+#     key= sort_price
+# )
+
+# def mape_products(product) -> Any:
+#     return product["price"]
+
+# show_price:list[Any] = list(map(
+#     mape_products, products
+# ))
+
+# def fill_products(product) -> Any:
+#     return product["stock"]
+
+# stock_products:list[Any]= list(filter(
+#     lambda product: product["stock"] > 7,
+#     products
+# )) 
+
+# sort_price:list[dict[str|int, Any]] = sorted(
+#     products,
+#     key= lambda product: product["price"],
+#     reverse= True
+# )
+
+# map_products: list[Any]= list(map(
+#     lambda product: product["price"],
+#     products
+# ))
+
+# filter_product:list[Any] = list(filter(
+#     lambda product: product["stock"] > 7,
+#     products
+# )) 
