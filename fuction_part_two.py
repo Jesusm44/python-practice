@@ -292,27 +292,152 @@
 
 # kwargs(**person)
 
-def create_basic_user(name: str, age: int):
-    if not isinstance(name, str):
-        return None
+# def create_basic_user(name: str, age: int):
+#     if not isinstance(name, str):
+#         return None
 
-    if not isinstance(age, int):
-        return None
+#     if not isinstance(age, int):
+#         return None
 
-    if name.strip() == "":
-        return None
+#     if name.strip() == "":
+#         return None
 
-    if age not in range(1,121):
-        return None
+#     if age not in range(1,121):
+#         return None
 
-    print(f'Nombre: {name} - Edad: {age}')
-    print("-" * 25)
+#     print(f'Nombre: {name} - Edad: {age}')
+#     print("-" * 25)
 
-create_basic_user("Ana", 24)
-create_basic_user("", 24)
-create_basic_user(123, 24)
-create_basic_user("Ana", "24")
-create_basic_user("Ana", -5)
-create_basic_user("Ana", 150)
+# create_basic_user("Ana", 24)
+# create_basic_user("", 24)
+# create_basic_user(123, 24)
+# create_basic_user("Ana", "24")
+# create_basic_user("Ana", -5)
+# create_basic_user("Ana", 150)
 
+
+# users = [
+#     {
+#         "id": 1,
+#         "name": "Ana",
+#         "age": 24
+#     },
+#     {
+#         "id": 2,
+#         "name": "Luis",
+#         "age": 17
+#     },
+#     {
+#         "id": 3,
+#         "name": "Carlos",
+#         "age": 31
+#     },
+#     {
+#         "id": -5,
+#         "name": "",
+#         "age": 101
+#     }
+# ]
+
+# def validate_user(user):
+#     if not isinstance(user, dict):
+#         return False
+
+#     if "id" not in user:
+#         return False
+
+#     if "name" not in user:
+#         return False
+
+#     if "age" not in user:
+#         return False
+
+#     user_id = user["id"]
+#     user_name = user["name"]
+#     user_age = user["age"]
+
+#     if not isinstance(user_id, int):
+#         return False
+
+#     if not isinstance(user_name, str):
+#         return False
+
+#     if not isinstance(user_age, int):
+#         return False
+
+#     if user_id < 0:
+#         return False
+
+#     if user_name.strip() == "":
+#         return False
+
+#     if user_age not in range(1, 101):
+#         return False
+
+#     return f"""
+# -----------------
+# ID:   {user_id}
+# Name: {user_name}
+# Age:  {user_age}
+# -----------------"""
+
+# for user in users:
+#     print(validate_user(user))
+
+# from typing import Any
+# def validation_user(user:dict[str,Any]) -> bool:
+
+#     if "id" not in user:
+#         return False
+
+#     if "name" not in user:
+#         return False
+
+#     if "age" not in user:
+#         return False
+
+#     if "status" not in user:
+#         return False
+
+#     user_id:int  = user["id"]
+#     user_name:str  = user["name"]
+#     user_age:int  = user["age"]
+#     user_status: bool = user["status"]
+
+#     if not isinstance(user_id, int):
+#         return False
+
+#     if not isinstance(user_name, str):
+#         return False
+
+#     if not isinstance(user_age, int):
+#         return False
+
+#     if not isinstance(user_status, bool):
+#         return False
+
+#     if user_id < 0:
+#         return False
+
+#     if user_name.strip() == "":
+#         return False
+
+#     if user_age not in range(1,101):
+#         return False
+
+#     return True
+
+# users = [
+#     {},
+#     {"id": 1},
+#     {"id": "1", "name": "Ana", "age": 24, "status": True},
+#     {"id": 1, "name": "", "age": 24, "status": True},
+#     {"id": 1, "name": "Ana", "age": -4, "status": True},
+#     {"id": 1, "name": "Ana", "age": 24, "status": "sí"},
+#     {"id": 1, "name": "Ana", "age": 24, "status": True},
+#     {"id": 1, "name": "Ana", "age": 24, "status": True}
+# ]
+
+# for user in users:
+    # print(validation_user(user))
 
