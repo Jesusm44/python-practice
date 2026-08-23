@@ -1,5 +1,8 @@
+from itertools import product
 from os import error
 from typing import Any, Literal
+
+from httpx import options
 
 # users:list[dict[str|int, Any]] = []
 
@@ -318,16 +321,129 @@ from typing import Any, Literal
 
 # print(users)
 
+products:list[dict[str|int, Any]] = [
+    {
+        "id": 1,
+        "name": "Laptop",
+        "price": 900,
+        "stock": 5
+    },
+    {
+        "id": 2,
+        "name": "Mouse",
+        "price": 25,
+        "stock": 20
+    },
+    {
+        "id": 3,
+        "name": "Monitor",
+        "price": 300,
+        "stock": 7
+    },
+] 
 
 
+def id_search(products,id:int) -> Any | None:
+    if not isinstance(id, int):
+        print("ERROR:ID is not a number")
+        return None
+
+    if id < 0:
+        print("ERROR:ID connaot be less than 0")
+        return None
+
+    for product in products:
+        if product["id"] == id:
+            return product
+
+    print("ERROR:ID not found.")
+    return None
+
+def name_search(products, name:str) -> Any | None:
+    if not isinstance(name,str):
+        print("ERROR:Name is not a text")
+        return None
+    
+    if name.strip() == "":
+        print("ERROR:The product name can never be empty.")
+
+    for product in products:
+        if product["name"] == name:
+            return product
+
+    print("ERROR:Name not found")
+
+def minimum_price(products) -> None:
+    minimun = None
+
+    for product in products:
+        if minimun is None or minimun > product["price"]:
+            minimun = product["price"]
+
+    return minimun
+
+def minimun_stock(products) -> None:
+    minimum = None
+
+    for product in products:
+        if minimum is None or minimum > product["stock"]:
+            minimum = product["stock"] 
+
+    return minimum
+
+def sold_out(products):
+    for product in products:
+        if product["stock"] == 0:
+            print(f"The product: {product} It's out of stock")
+
+    return product
+
+def add_product(products, id,name,price,stock) -> None:
+    new_id = id_search(products,id)
+    new_name = name_search(products, name)
+
+    if new_id or new_name:
+        return None
+
+    if new_id is None and new_name is None:
+
+        if not isinstance(price, (int, float)):
+            return None
+
+        if price < 0:
+            return None
+
+        if not isinstance(stock, int):
+            return None
+
+        if stock < 0:
+            return None
+
+        new_product ={
+            "id": id,
+            "name": name,
+            "price": price,
+            "stock": stock
+        }
+
+    products.append(new_product)
+
+def process_products(products):
+    options = int(input(f"""
+Choose the following options:
+1.  Search for a product by ID. #
+2.  Search for a product by name. #
+3.  Show minimum price. #
+4.  Show minimum stock. # 
+5.  Add product. #
+6.  Product out of stock. #
+7.  Sort by price.
+8.  Sort by name.
+9   Sort by stock.
+10. Product summary (total quantity and investment).
+11. Print Products: """))
+
+    print(options)
 
 
-
-
-
-
-
-
-
-
-
+process_products(products)
