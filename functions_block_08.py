@@ -419,7 +419,7 @@ def add_product(products, id,name,price,stock) -> None:
 
 def sold_out(products) -> Any:
     found = False
-    e
+
     for product in products:
         if product["stock"] == 0:
             print(f"The product: {product} It's out of stock")
