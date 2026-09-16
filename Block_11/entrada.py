@@ -8,3 +8,4 @@ def read_age()-> int:
 
 def read_options():
     option = int(input("Enter your option: "))
+    return option

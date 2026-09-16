@@ -4,7 +4,6 @@ import validation
 
 students:list[Any] = []
 
-
 def create_student() -> dict[str, Any]:
     name: str=   read_name().capitalize()
     age: int = read_age()
@@ -16,35 +15,23 @@ def create_student() -> dict[str, Any]:
         "name" : valid_name,
         "age" : valid_age
     }
-
     return new_student
 
-student = create_student()
-
-def save_student(students,student:dict[str,Any]) -> dict[str, Any]:
+def save_student(students,student:dict[str,Any]) -> Any:
     students.append(student)
     return students
 
-def search_student(students, name:str) -> str:
-    name = read_name()
+def search_student(students,name)  -> list[dict[str, Any]]:
+    valid_name = validation.validation_name(name).capitalize()
 
-    result:list[Any] = list(filter(lambda student: student["name"] == name, students)) 
-
-    if result:
-        return f'The student {name} has found.'
-
-    return f'The student {name} not found'
-
-def delete_student(name:str) -> None:
-    name = read_name()
-
-    result:list[Any] = list(
-        filter(
-            lambda student: student["name"] == name, students
-        ))
+    result:list[Any] = list(filter(lambda student: student["name"] == valid_name, students)) 
+    return result
+    
+def delete_student(students,name) -> bool:
+    valid_name = validation.validation_name(name).capitalize()
+    result:list[Any] = list(filter( lambda student: student["name"] == valid_name, students))
 
     if result:
         students.remove(result[0])
-        print(f"Student {name} has been deleted.")
-    else:
-        print(f"Student {name} not found.")
+        return True
+    return False
