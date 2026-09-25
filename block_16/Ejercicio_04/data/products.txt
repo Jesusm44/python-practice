@@ -1,0 +1,1 @@
+{"code": "A001", "name": "Keyboard", "cent_price": "2500", "stock": 10}
