@@ -1,12 +1,30 @@
-from .domain import (
+import pathlib
+import json
+
+from domain import (
     _validation_code,
     _validation_name,
     _validation_price,
-    _validation_stock
+    _validation_stock,
 )
 
-# Validates the product data and saves the product in the list.
-def save_product(products: list, code, name, price, stock):
+
+DIR = pathlib.Path(__file__).parent / "data"
+DIR.mkdir(parents=True, exist_ok=True)
+
+FILE = DIR / "products.json"
+
+
+def save_products(products) -> None:
+    with open(
+        FILE,
+        "w",
+        encoding="utf-8"
+    ) as archive:
+        json.dump(products, archive, indent=4)
+
+
+def save_product(products: list, code, name, price, stock) -> None:
     # Validate each product field before saving it.
     code = _validation_code(products, code)
     name = _validation_name(name)
@@ -18,31 +36,15 @@ def save_product(products: list, code, name, price, stock):
         "code": code,
         "name": name,
         "price": price,
-        "stock": stock
+        "stock": stock,
     }
-    # Save the product in the products list.
+
+    # Save the product in memory.
     products.append(product)
-    return products
 
-# Searches for a product using its code.
-def search_product(products, code):
-    # Filter the products that have the requested code.
-    convert_code = int(code)
-    result = list(filter(
-        lambda product: product["code"] == convert_code,
-        products
-    ))
+    # Save the updated products list in the JSON file.
+    save_products(products)
 
-    # If no product was found, raise an error.
-    if not result:
-        raise ValueError("Product not found")
-
-    # Return the product found.
-    return result[0]
-
-# Returns all saved products.
-def show_products(products):
-    return products
 
 # Deletes a product using its code.
 def delete_product(products, code):
@@ -57,3 +59,5 @@ def delete_product(products, code):
         raise ValueError("Product not found")
     # Remove the product found from the list.
     products.remove(result[0])
+    # Save the updated products list in the JSON file.
+    save_products(products)

@@ -1,5 +1,6 @@
 # Import the required functions from the service module.
-from .service import save_product, search_product, show_products, delete_product
+from service import search_product, show_products
+from save import delete_product, save_product, delete_product
 
 
 def main():
@@ -33,15 +34,13 @@ def main():
 
             try:
                 # Try to save the product in the products list.
-                save_product(products, code, name, price, stock)
-
-                # This message is shown only if no exception occurs.
-                print("Product saved successfully")
+                save_product(products,code,name,price,stock)
+                # This message is shown only if no exception occur.
+                print("File saved successfully.")
 
             # Handle errors related to invalid values.
             except ValueError as error:
                 print(error)
-
             # Handle errors related to invalid data types.
             except TypeError as type_error:
                 print(type_error)
