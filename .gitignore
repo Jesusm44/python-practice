@@ -1,0 +1,43 @@
+# =========================
+# PYTHON
+# =========================
+
+__pycache__/
+*.py[cod]
+
+# =========================
+# ENTORNOS VIRTUALES
+# =========================
+
+.venv/
+venv/
+env/
+
+# =========================
+# PYTEST Y COBERTURA
+# =========================
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# HERRAMIENTAS DE ANÁLISIS
+# =========================
+
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# VARIABLES DE ENTORNO
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# CARPETAS EXCLUIDAS
+# =========================
+
+/block_45/
