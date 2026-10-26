@@ -1,10 +1,10 @@
 import pytest
-from block_41.failure import Deposito
+from block_41.failure import Tank
 
 def test_fail_extract():
-    tank = Deposito(
-        capacidad=100,
-        cantidad_actual=100
+    tank = Tank(
+        capacity=100,
+        current_amount=100
     )
     with pytest.raises(ValueError):
-        tank.extraer(101)
+        tank.extract(101)
