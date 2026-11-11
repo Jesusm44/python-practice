@@ -1,6 +1,6 @@
 import pytest
 
-from block_57.new_user_session import NewUser
+from block_56.new_user_session import NewUser
 
 def test_new_user_one():
     user = NewUser(
